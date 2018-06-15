@@ -5,6 +5,79 @@
  * @variable PRIVATE { Number } `total`
  * @return {object} `calculator` object that can be used
  */
+var calculatorModule = function() {
+    var memory = 0;
+    var total = 0;
+
+    return {
+        // memory: memory,
+        // total: total,
+    // function validate(num) {
+    //     if(typeof num !== 'number') {
+    //         throw err;
+    //     }
+    // }
+        load: function(num) {
+            if (typeof num === 'number') {
+                return total = num;
+            }
+            else {
+                throw err;
+            }
+            
+            // return total = num;
+        },
+        getTotal: function() {
+            return total;
+        },
+        add: function(num) {
+            if (typeof num === 'number') {
+                return total += num;
+            }
+            else {
+                throw err;
+            }
+            // return total += num;
+
+        },
+        subtract: function(num) {
+            if (typeof num === 'number') {
+                return total -= num;
+            }
+            else {
+                throw err;
+            }
+            // return total -= num;
+        },
+        multiply: function(num) {
+            if (typeof num === 'number') {
+                return total *= num;
+            }
+            else {
+                throw err;
+            }
+            // return total *= num;
+        },
+        divide: function(num) {
+            if (typeof num === 'number') {
+                return total /= num;
+            }
+            else {
+                throw err;
+            }
+            // return total /= num;
+        },
+        recallMemory: function() {
+            return memory;
+        },
+        saveMemory: function() {
+            return memory = total;
+        },
+        clearMemory: function() {
+            return memory = 0;
+        }
+    }
+}
 
 
   /**
